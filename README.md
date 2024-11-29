@@ -6,6 +6,10 @@
 
 ### Register custom container.
 
+- @parameter (string) name : Is the required name to set for this custom container (such as: Motel Room #1)
+- @parameter (string) weight : Is the required total / maximum weight of the container (that can carry).
+- @parameter (boolean) create : Is the required type for creating (inserting) into the sql the registered custom container or not. This parameter is for safety reasons, the specified event should only be called once to register this custom container and not multiple times (create parameter should be true).
+
 ```lua
 TriggerEvent("tp_containers:server:registerCustomContainer", name, weight, create) -- Server side to server side.
 TriggerServerEvent("tp_containers:server:registerCustomContainer", name, weight, create) -- Client side to server side.
@@ -15,6 +19,7 @@ TriggerServerEvent("tp_containers:server:registerCustomContainer", name, weight,
 
 - You are allowed to edit the specified event since we provide it public, mostly for safety reasons.
 - A container ID is located on `tp_containers` sql table.
+
 ```lua
 TriggerClientEvent("tp_containers:client:openInventoryContainerById", source, containerId) -- Server side to client side.
 TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Client side to client side.
@@ -23,6 +28,7 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 ## Exports
 
 ### Open custom container by its ID
+
 - A container ID is located on `tp_containers` sql table.
-- 
+
 ```exports.tp_containers:OpenInventoryContainerById(containerId)```
