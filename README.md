@@ -27,7 +27,8 @@ TriggerServerEvent("tp_containers:server:upgradeContainerInventoryWeight", conta
 
 ### Open custom container by its ID
 
-- You are allowed to edit the specified event since we provide it public, mostly for safety reasons.
+**You are allowed to edit the specified event since we provide it public, mostly for safety reasons.**
+
 - `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
 
 ```lua
