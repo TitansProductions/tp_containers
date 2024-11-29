@@ -19,3 +19,5 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 ```
 
 ## Exports
+
+```exports.tp_containers:OpenInventoryContainerById(containerId)```
