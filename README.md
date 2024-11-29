@@ -13,6 +13,8 @@ TriggerServerEvent("tp_containers:server:registerCustomContainer", name, weight,
 
 ### Open custom container by its ID
 
+- You are allowed to edit the specified event since we provide it public, mostly for safety reasons.
+- A container ID is located on `tp_containers` sql table.
 ```lua
 TriggerClientEvent("tp_containers:client:openInventoryContainerById", source, containerId) -- Server side to client side.
 TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Client side to client side.
@@ -21,5 +23,6 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 ## Exports
 
 ### Open custom container by its ID
-
+- A container ID is located on `tp_containers` sql table.
+- 
 ```exports.tp_containers:OpenInventoryContainerById(containerId)```
