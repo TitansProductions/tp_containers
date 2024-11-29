@@ -17,8 +17,8 @@ TriggerServerEvent("tp_containers:server:registerCustomContainer", name, weight,
 
 ### Upgrade custom container weight
 
-- @parameter (number) containerId : Is the required custom container ID which is located on `tp_containers` sql table.
-- @parameter (number) extraWeight : Is the required for adding extra weight to an existing custom container (upgrading / increasing its weight).
+- `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
+- `@parameter (number) extraWeight` : Is the required for adding extra weight to an existing custom container (upgrading / increasing its weight).
 
 ```lua
 TriggerEvent("tp_containers:server:upgradeContainerInventoryWeight", containerId, extraWeight) -- Server side to server side.
