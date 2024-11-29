@@ -15,10 +15,20 @@ TriggerEvent("tp_containers:server:registerCustomContainer", name, weight, creat
 TriggerServerEvent("tp_containers:server:registerCustomContainer", name, weight, create) -- Client side to server side.
 ```
 
+### Upgrade custom container weight
+
+- @parameter (number) containerId : Is the required custom container ID which is located on `tp_containers` sql table.
+- @parameter (number) extraWeight : Is the required for adding extra weight to an existing custom container (upgrading / increasing its weight).
+
+```lua
+TriggerEvent("tp_containers:server:upgradeContainerInventoryWeight", containerId, extraWeight) -- Server side to server side.
+TriggerServerEvent("tp_containers:server:upgradeContainerInventoryWeight", containerId, extraWeight) -- Client side to server side.
+```
+
 ### Open custom container by its ID
 
 - You are allowed to edit the specified event since we provide it public, mostly for safety reasons.
-- A container ID is located on `tp_containers` sql table.
+- @parameter (number) containerId : Is the required custom container ID which is located on `tp_containers` sql table.
 
 ```lua
 TriggerClientEvent("tp_containers:client:openInventoryContainerById", source, containerId) -- Server side to client side.
@@ -29,6 +39,6 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 
 ### Open custom container by its ID
 
-- A container ID is located on `tp_containers` sql table.
+- @parameter (number) containerId : Is the required custom container ID which is located on `tp_containers` sql table.
 
 ```exports.tp_containers:OpenInventoryContainerById(containerId)```
