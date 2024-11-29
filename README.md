@@ -41,4 +41,6 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 
 - `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
 
-```exports.tp_containers:OpenInventoryContainerById(containerId)```
+```lua
+exports.tp_containers:OpenInventoryContainerById(containerId)
+```
