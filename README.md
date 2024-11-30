@@ -45,3 +45,9 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 ```lua
 exports.tp_containers:OpenInventoryContainerById(containerId)
 ```
+
+### Check if a player has the containers active (open)
+
+```lua
+exports.tp_containers:HasActiveContainers() -- returns boolean.
+```
