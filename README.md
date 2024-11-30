@@ -30,10 +30,11 @@ TriggerServerEvent("tp_containers:server:upgradeContainerInventoryWeight", conta
 **You are allowed to edit the specified event since we provide it public, mostly for safety reasons.**
 
 - `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
+- `@parameter (text) header` : If the header is not placed, it will select as the custom inventory container title the default name that has been created in first place, otherwise it will set as title the selected / input text.
 
 ```lua
-TriggerClientEvent("tp_containers:client:openInventoryContainerById", source, containerId) -- Server side to client side.
-TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Client side to client side.
+TriggerClientEvent("tp_containers:client:openInventoryContainerById", source, containerId, header) -- Server side to client side.
+TriggerEvent("tp_containers:server:registerCustomContainer", containerId, header) -- Client side to client side.
 ```
 
 # Exports
@@ -41,9 +42,10 @@ TriggerEvent("tp_containers:server:registerCustomContainer", containerId) -- Cli
 ### Open custom container by its ID
 
 - `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
+- `@parameter (text) header` : If the header is not placed, it will select as the custom inventory container title the default name that has been created in first place, otherwise it will set as title the selected / input text.
 
 ```lua
-exports.tp_containers:OpenInventoryContainerById(containerId)
+exports.tp_containers:OpenInventoryContainerById(containerId, header)
 ```
 
 ### Check if a player has the containers active (open)
