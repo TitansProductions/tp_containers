@@ -15,6 +15,15 @@ TriggerEvent("tp_containers:server:registerCustomContainer", name, weight, creat
 TriggerServerEvent("tp_containers:server:registerCustomContainer", name, weight, create) -- Client side to server side.
 ```
 
+## Unregister custom container
+
+- `@parameter (text) name` : Is the required custom container name.
+
+```lua
+TriggerEvent("tp_containers:server:unregisterCustomContainer", name) -- Server side to server side.
+TriggerServerEvent("tp_containers:server:unregisterCustomContainer", name) -- Client side to server side.
+```
+
 ### Upgrade custom container weight
 
 - `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
