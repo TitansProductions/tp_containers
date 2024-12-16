@@ -43,7 +43,7 @@ TriggerServerEvent("tp_containers:server:upgradeContainerInventoryWeight", conta
 
 ```lua
 TriggerClientEvent("tp_containers:client:openInventoryContainerById", source, containerId, header) -- Server side to client side.
-TriggerEvent("tp_containers:server:registerCustomContainer", containerId, header) -- Client side to client side.
+TriggerEvent("tp_containers:server:openInventoryContainerById", containerId, header) -- Client side to client side.
 ```
 
 # Exports
