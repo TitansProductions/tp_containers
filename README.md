@@ -6,9 +6,11 @@
 
 ### Register custom container.
 
+The specified event should only be called once to register this custom container and not multiple times.
+
 - `@parameter (text) name` : Is the required name to set for this custom container (such as: Motel Room #1)
 - `@parameter (number) weight` : Is the required total / maximum weight of the container (that can carry).
-- `@parameter (true / false) create` : Is the required type for creating (inserting) into the sql the registered custom container or not. This parameter is for safety reasons, the specified event should only be called once to register this custom container and not multiple times (create parameter should be true).
+- `@parameter (true / false) create` : Is the required type for creating (inserting) into the sql the registered custom container or not. If you set it to false, the container will remain active only while server has not yet restarted. This allows to create non-permanent storages.
 
 ```lua
 TriggerEvent("tp_containers:server:registerCustomContainer", name, weight, create) -- Server side to server side.
