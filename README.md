@@ -51,6 +51,14 @@ TriggerEvent("tp_containers:server:openInventoryContainerById", containerId, hea
 
 # Exports
 
+## Retrieve the Id of a created container name.
+
+```lua
+
+local id = exports.tp_containers:GetContainerIdByFirstNameResult(containerName) -- server side export only.
+
+```
+
 ### Open custom container by its ID
 
 - `@parameter (number) containerId` : Is the required custom container ID which is located on `tp_containers` sql table.
